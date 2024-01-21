@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="5"
+    tools:context=".SelectActivity">
+
+    <!-- Add a custom view for drawing on top of the ImageView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#ffff"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
+        app:cardElevation="4dp"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/videoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextureView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                />
+        </FrameLayout>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_default"
+
+                />
+            <com.example.yolov8androidonnx.RectView
+                android:id="@+id/rectView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+         />
+        </FrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:weightSum="2"
+    >
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <Button
+            android:id="@+id/btnSelectImg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Select Image"
+            android:textSize="16sp"
+            android:background="@drawable/custom_boder"
+            android:layout_gravity="bottom"
+            android:padding="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/btnSelectVideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Select Video"
+            android:background="@drawable/custom_boder"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_marginStart="4dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btnSelectCamera"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Select Camera"
+            android:textSize="16sp"
+            android:background="@drawable/custom_boder"
+            android:padding="10dp"
+            android:layout_marginEnd="4dp"
+            />
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btnSetting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Setting"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_boder"
+            android:padding="10dp"
+            android:layout_marginStart="4dp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+</LinearLayout>
